@@ -92,13 +92,29 @@ public class Vocab {
             entry2=entry1;
         }
          */
-        //Найти слова с тремя одинаковыми буквами
+        /*Найти слова с тремя одинаковыми буквами
         for (String s1 :vocab) {
             char[] arr = s1.toCharArray();
             Arrays.sort(arr);
             char c0 = ' '; int count0 = 1;
             for (char c:arr){
                 if (c==c0) count0++;
+                else count0 = 1;
+                if (count0==3) {
+                    System.out.println(s1);
+                    break;
+                }
+                c0=c;
+            }
+        }
+        */
+        //найти 3 буквы которые следует по алфавиту abc cde
+        for (String s1 :vocab) {
+            char[] arr = s1.toCharArray();
+
+            char c0 = ' '; int count0 = 1;
+            for (char c:arr){
+                if (c-c0==1) count0++;
                 else count0 = 1;
                 if (count0==3) {
                     System.out.println(s1);
