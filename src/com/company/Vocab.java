@@ -92,6 +92,7 @@ public class Vocab {
             entry2=entry1;
         }
          */
+
         /*Найти слова с тремя одинаковыми буквами
         for (String s1 :vocab) {
             char[] arr = s1.toCharArray();
@@ -108,7 +109,7 @@ public class Vocab {
             }
         }
         */
-        //найти 3 буквы которые следует по алфавиту abc cde
+        /*найти 3 буквы которые следует по алфавиту abc cde
         for (String s1 :vocab) {
             char[] arr = s1.toCharArray();
 
@@ -123,5 +124,23 @@ public class Vocab {
                 c0=c;
             }
         }
+         */
+
+        //Частота встречаемости букв в словах
+String s1="",s2="";
+count=0;
+        for (int i = 0; i < vocab.size(); i++){
+            s1=vocab.get(i);
+            s2=vocab.get(i+1);
+
+            for (int j = 0; j < vocab.size(); j++){
+              if(s1.charAt(j)==s2.charAt(j)) {
+                 count++;
+              }
+            }
+            System.out.println();
+            count=0;
+        }
+
         }
     }
