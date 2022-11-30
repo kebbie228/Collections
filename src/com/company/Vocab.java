@@ -126,21 +126,45 @@ public class Vocab {
         }
          */
 
-        //Частота встречаемости букв в словах
-String s1="",s2="";
-count=0;
-        for (int i = 0; i < vocab.size(); i++){
-            s1=vocab.get(i);
-            s2=vocab.get(i+1);
-
-            for (int j = 0; j < vocab.size(); j++){
-              if(s1.charAt(j)==s2.charAt(j)) {
-                 count++;
-              }
+        /*Частота встречаемости букв в словах - HOMEWORK 1
+        String s1;
+        count = 0;
+        char c = ' ';
+        char[] alf = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+                'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+                's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        for (int i = 0; i < alf.length; i++) {
+            c = alf[i];
+            System.out.print(alf[i] + " ");
+            for (int k = 0; k < vocab.size(); k++) {
+                s1 = vocab.get(k);
+                for (int j = 0; j < s1.length(); j++){
+                    if (alf[i] == s1.charAt(j)) count++;
+                    }
             }
-            System.out.println();
-            count=0;
+            System.out.println(count);
+            count = 0;
         }
-
+         */
+       /*Количество слов, начинающихся на определенную букву (от 'a' до 'z')
+        String s1;
+        count = 0;
+        char c = ' ';
+        char[] alf = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',
+                'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+                's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+        for (int i = 0; i < alf.length; i++) {
+            c = alf[i];
+            System.out.print(alf[i] + " ");
+            for (int k = 0; k < vocab.size(); k++) {
+                s1 = vocab.get(k);
+                for (int j = 0; j < 1; j++){
+                    if (alf[i] == s1.charAt(0)) count++;
+                }
+            }
+            System.out.println(count);
+            count = 0;
         }
+        */
     }
+}
